@@ -9,23 +9,6 @@ export default class Link extends React.Component {
     };
   }
 
-  static get schema() {
-    return {
-      schema: {
-        type: 'object',
-        title: 'Link',
-        properties: {
-          text: {
-            type: 'string',
-          },
-          href: {
-            type: 'string',
-          },
-        },
-      },
-    };
-  }
-
   render() {
     return (
       <a href={this.props.href}>{this.props.text}</a>

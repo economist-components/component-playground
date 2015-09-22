@@ -18,7 +18,24 @@ export default class Playground extends React.Component {
     /* eslint-disable id-match */
     /* eslint-disable no-undef */
     /* eslint-disable no-console */
-    editor = new JSONEditor(document.getElementById('json-editor'), Link.schema);
+    const properties = {};
+    for (const prop in Link.propTypes) {
+      let type = '';
+      if (Link.propTypes[prop] === React.PropTypes.string.isRequired) {
+        type = 'string';
+      }
+      properties[prop] = {
+        type,
+      };
+    }
+    const schemaObj = {
+      schema: {
+        type: 'object',
+        title: 'Link',
+        properties,
+      },
+    };
+    editor = new JSONEditor(document.getElementById('json-editor'), schemaObj);
     this.editorVal = editor.getValue();
     const elms = document.querySelectorAll('.form-control input');
     for (let i = 0; i < elms.length; i++) {
