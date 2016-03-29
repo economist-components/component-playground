@@ -129,7 +129,7 @@
   },
   "dependencies": {
     "json-editor": "^0.7.22",
-    "react": "^0.13.3"
+    "react": "^0.14.8"
   },
   "devDependencies": {
     "@economist/component-devpack": "^3.3.1",
