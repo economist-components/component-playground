@@ -100,7 +100,7 @@
     ]
   },
   "dependencies": {
-    "json-editor": "^0.7.22",
+    "json-editor": "^0.7.25",
     "react": "^0.14.7"
   },
   "devDependencies": {
